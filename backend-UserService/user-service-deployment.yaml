@@ -18,6 +18,6 @@ spec:
           image: zaidalogaili/user-service:latest
           env:
             - name: DATABASE_URL
-              value: "mysql://root:root12345@host.docker.internal:3306/progress_tracker_user_db"
+              value: "YOUR_DATABASE_URL"
             - name: JWT_SECRET
-              value: "45cb20553190783d75f1d00b626b69ac1ff75c544ab16fb01ccf8778b20399c88f15333d06ab1f9393ef04ce3eeaf3b1153078bc3788ffed0637db32774f6934"
+              value: "YOUR_JWT_SECRET"

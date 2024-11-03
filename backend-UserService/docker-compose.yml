@@ -4,15 +4,15 @@ version: '3.8'
 
 services:
   userservice:
-    image: user-service:latest  # Change this line to use the local image
+    image: user-service:latest  
     ports:
-      - "3008:3008"  # Map host port 3008 to container port 3008
+      - "3008:3008"  
     environment:
       - DATABASE_HOST=mysql
-      - DATABASE_PORT=3306
-      - DATABASE_USER=root
-      - DATABASE_PASSWORD=root12345
-      - DATABASE_NAME=progress_tracker_user_db
+      - DATABASE_PORT=YOUR_DB_PORT
+      - DATABASE_USER=YOUR_USER
+      - DATABASE_PASSWORD=YOUR_PASSWORD
+      - DATABASE_NAME=YOUR_DB_NAME
     depends_on:
       - mysql
     networks:
@@ -21,10 +21,10 @@ services:
   mysql:
     image: mysql:latest
     ports:
-      - "3304:3306"  # This should be 3306 for MySQL, not 3304
+      - "3304:3306"  
     environment:
-      - MYSQL_ROOT_PASSWORD=root12345
-      - MYSQL_DATABASE=progress_tracker_user_db
+      - MYSQL_ROOT_PASSWORD=YOUR_PASSWORD
+      - MYSQL_DATABASE=YOUR_DB_NAME
     volumes:
       - mysql-data:/var/lib/mysql
     networks:
