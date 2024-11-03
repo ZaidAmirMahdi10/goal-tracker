@@ -1,0 +1,13 @@
+# user-service-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service
+spec:
+  type: NodePort  
+  ports:
+    - port: 3008
+      targetPort: 3008
+      nodePort: 30080  
+  selector:
+    app: user-service

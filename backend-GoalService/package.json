@@ -1,0 +1,17 @@
+{
+  "name": "backend-GoalService",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^5.21.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "prisma": "^5.21.1"
+  },
+  "scripts": {
+    "start": "node src/index.js"
+  }
+}

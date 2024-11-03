@@ -1,0 +1,23 @@
+# user-service-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: user-service
+  template:
+    metadata:
+      labels:
+        app: user-service
+    spec:
+      containers:
+        - name: user-service
+          image: zaidalogaili/user-service:latest
+          env:
+            - name: DATABASE_URL
+              value: "mysql://root:root12345@host.docker.internal:3306/progress_tracker_user_db"
+            - name: JWT_SECRET
+              value: "45cb20553190783d75f1d00b626b69ac1ff75c544ab16fb01ccf8778b20399c88f15333d06ab1f9393ef04ce3eeaf3b1153078bc3788ffed0637db32774f6934"

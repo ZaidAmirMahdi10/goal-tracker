@@ -1,0 +1,13 @@
+# goal-service-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: goal-service
+spec:
+  type: NodePort  
+  ports:
+    - port: 3009  
+      targetPort: 3009
+      nodePort: 30090  
+  selector:
+    app: goal-service
