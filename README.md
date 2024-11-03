@@ -36,5 +36,5 @@ The application is designed to be deployed using Kubernetes. Each microservice c
 
 1. **Build Docker Images**:
    ```bash
-   docker build -t zaidalogaili/user-service:latest ./backend-UserService
-   docker build -t zaidalogaili/goal-service:latest ./backend-GoalService
+   docker build -t dockerhub_username/user-service:latest ./backend-UserService
+   docker build -t dockerhub_username/goal-service:latest ./backend-GoalService
